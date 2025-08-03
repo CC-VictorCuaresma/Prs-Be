@@ -10,10 +10,6 @@ Todos los microservicios deben seguir la siguiente convención de nombres:
 
 ms-[nombre-funcional]
 
-markdown
-Copy
-Edit
-
 - Usar nombres en **inglés** y en **minúsculas**
 - Separar palabras con guiones (`-`)
 - Evitar tildes, espacios y guiones bajos
