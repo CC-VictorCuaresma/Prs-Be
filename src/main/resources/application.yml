@@ -1,0 +1,58 @@
+spring:
+     application:
+          name: ${NOMBRE_MICROSERVICIO:structure-microservice}
+     data:
+          mongodb:
+               uri: mongodb+srv://${MONGO_USERNAME:sistemajass}:${MONGO_PASSWORD:ZC7O1Ok40SwkfEje}@sistemajass.jn6cpoz.mongodb.net/${MONGO_DATABASE:JASS_DIGITAL}?retryWrites=true&w=majority
+     web:
+          resources:
+               cache:
+                    period: 0
+     # security: 
+     #      oauth2:
+     #           resourceserver:
+     #                jwt:
+     #                     issuer-uri: http://localhost:8080/realms/Prs-Distribution
+     #                     jwk-set-uri: http://localhost:8080/realms/Prs-Distribution/protocol/openid-connect/certs
+
+server:
+     port: 8086
+     servlet:
+          context-path: /
+cors:
+     allowed-origins: "*"
+     allowed-methods: GET,POST,PUT,DELETE,PATCH,OPTIONS,HEAD
+     allowed-headers: "*"
+     allow-credentials: true
+     max-age: 3600
+
+springdoc:
+     swagger-ui:
+          path: /swagger-ui.html
+          enabled: true
+          config-url: /v3/api-docs/swagger-config
+          urls:
+               - url: /v3/api-docs
+                 name: API V1
+     api-docs:
+          path: /v3/api-docs
+     default-produces-media-type: application/json
+     paths-to-match: /api/**
+
+management:
+     endpoints:
+          web:
+               exposure:
+                    include: health,info,metrics,prometheus
+     endpoint:
+          health:
+               show-details: always
+          metrics:
+               enabled: true
+          prometheus:
+               enabled: true
+
+app:
+     name: Structure Microservice
+     description: Microservicio para gestión de estructuras
+     version: 1.0.0
