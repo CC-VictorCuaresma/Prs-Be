@@ -19,6 +19,7 @@ Edit
 - Evitar tildes, espacios y guiones bajos
 
 ### 📌 Ejemplos:
+---
 | Área funcional     | Nombre del microservicio   |
 |--------------------|----------------------------|
 | Autenticación      | `ms-auth`                  |
@@ -26,7 +27,6 @@ Edit
 | Distribución       | `ms-distribution`          |
 | Encuestas          | `ms-survey`                |
 | Configuración      | `ms-config`                |
-
 ---
 
 ## 🌿 Estrategia de Ramas Git
@@ -35,6 +35,7 @@ Se aplica un flujo de trabajo basado en **Git Flow**, adaptado para entornos con
 
 ### Estructura de ramas:
 
+---
 | Rama        | Propósito                                                      |
 |-------------|----------------------------------------------------------------|
 | `main`      | Código en producción (estable)                                 |
@@ -43,6 +44,7 @@ Se aplica un flujo de trabajo basado en **Git Flow**, adaptado para entornos con
 | `bugfix/*`  | Corrección de errores menores                                  |
 | `hotfix/*`  | Correcciones críticas directamente sobre `main`                |
 | `release/*` | Preparación para despliegues                                   |
+---
 
 ### Ejemplos de nombres de rama:
 
@@ -75,9 +77,6 @@ ms-[nombre]/
 ├── README.md
 └── pom.xml / build.gradle
 
-yaml
-Copy
-Edit
 
 ### ⚙️ Configuración
 
